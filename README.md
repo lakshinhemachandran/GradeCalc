@@ -1,16 +1,33 @@
-# React + Vite
+# GradeCalc
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+GradeCalc is now a Node.js + React app that lets students:
 
-Currently, two official plugins are available:
+- Paste their current gradebook text
+- Parse current assignments (local parser or AI parser with Puter.js)
+- Add only missing upcoming grades manually
+- See current and projected grades instantly
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Run locally
 
-## React Compiler
+```bash
+npm install
+npm run dev
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Build
 
-## Expanding the ESLint configuration
+```bash
+npm run build
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Lint
+
+```bash
+npm run lint
+```
+
+## AI parsing notes
+
+- Select **AI parser (Puter.js)** in the UI.
+- GradeCalc uses `@heyputer/puter.js` on the frontend.
+- If AI parsing fails, GradeCalc automatically falls back to the local parser.
