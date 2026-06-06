@@ -1,62 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GradeCalc</title>
-    <script defer src="https://cloud.umami.is/script.js" data-website-id="6ba0462e-660b-4e91-b9de-4f6875887a03"></script>
-    <link rel="stylesheet" href="styles.css">
-     <link rel="icon" type="image/png" href="logo.png">
-</head>
-<body>
-<div class="container">
-    <section id="step-0">
-        <img src="logo.png" style="margin-bottom: 20px">
-        <h1>GradeCalc</h1>
-        <p>Calculate your projected average by combining your current gradebook with pending assignments.</p>
-        <button onclick="document.getElementById('step-1').scrollIntoView()">Get Started</button>
-    </section>
-
-    <section id="step-1">
-        <p>Which class are you calculating for?</p>
-        <input type="text" id="class-name-input" placeholder="e.g. Science">
-        <button onclick="document.getElementById('step-2').scrollIntoView()">Next</button>
-    </section>
-
-    <section id="step-2">
-        <p>Enter scores already in your gradebook:</p>
-        <div id="existing-grade-list" class="grade-list">
-            <div class="grade-row">
-                <input type="number" class="score" placeholder="Score">
-                <input type="number" class="total" placeholder="Total">
-            </div>
-        </div>
-        <button id="add-row" class="secondary-btn">+ Add Row</button>
-        <button id="add-existing" onclick="document.getElementById('step-3').scrollIntoView()">Next Step</button>
-    </section>
-
-    <section id="step-3">
-        <p>Enter scores NOT in the gradebook yet:</p>
-        <div id="pending-grade-list" class="grade-list">
-            <div class="grade-row">
-                <input type="number" class="score" placeholder="Score">
-                <input type="number" class="total" placeholder="Total">
-            </div>
-        </div>
-        <button id="add-pending" class="secondary-btn">+ Add Row</button>
-        <button id="calculate-btn" onclick="document.getElementById('step-4').scrollIntoView()">Calculate</button>
-    </section>
-
-    <section id="step-4">
-        <p>Your projected grade for <span id="display-class-name">Science</span>:</p>
-        <p>❗Some schools may round this value❗</p>
-        <h1 id="final-result">--%</h1>
-        <button onclick="window.scrollTo(0,0)" class="secondary-btn">Start Over</button>
-         <footer class="main-footer">
-            Created by Lakshin Hemachandran
-        </footer>
-    </section>
-</div>
-    <script src="script.js"></script>
-</body>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
